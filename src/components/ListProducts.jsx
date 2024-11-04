@@ -48,7 +48,7 @@ export default function ListProducts() {
 								<img src={imgSlide1} className={`${Styles.img_slide} d-block`} alt="Image" />
 								<div className={Styles.carousel_caption}>
 									<h3>Bienvenido administrador</h3>
-									<p>Has iniciado sesión con: <span>{userStorage.email}</span></p>
+									<p>Has iniciado sesión como: <span>{userStorage.email}</span></p>
 								</div>
 							</div>
 						</div>
