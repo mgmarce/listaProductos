@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+//importamos el servicio de la autenticacion
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+
+//firestore
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -13,5 +16,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
-export default db
+//firestore
+//auth
+//Indicamos que se va utilizar el servicio de la autenticacion con la app
+const auth_user = getAuth(app)
+const providerGoogle = new GoogleAuthProvider()
+export { auth_user, providerGoogle };

@@ -1,16 +1,5 @@
-/* src/index.css o src/App.css */
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Archivo:ital,wght@0,100..900;1,100..900&family=Krub:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-:root {
-  --primary-color: #3f4343;
-  --secondary-color: #ffffff;
-  --first-color: #FF4E00;
-  --first-color-hover: #cd3a00;
-  --second-color: #5677e2;
-  --hr-color:#ccc;
-}
-body {
-	font-family: "ABeeZee", sans-serif;
-}
+
+
 /*NAV*/
 .nav_link_name span{
   color: var(--first-color);
@@ -174,18 +163,18 @@ body {
   background-color: var(--first-color-hover);
 }
 /*about*/
-.about-us {
+.about_us {
   background-color: #cccccc56;
   width: 100%;
 }
 
-.about-text {
+.about_text {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--primary-color);
 }
 
-.btn-ingresar {
+.btn_ingresar {
   padding: 12px 30px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -198,46 +187,46 @@ body {
   margin-top: 20px;
 }
 
-.btn-ingresar:hover {
+.btn_ingresar:hover {
   background-color: var(--first-color);
   color: var(--secondary-color);
 }
 
  /*Footer*/
- .footer-section {
+ .footer_section {
   background-color: #333;
   color: #ccc;
   padding: 40px 0;
   font-size: 0.9rem;
 }
 
-.footer-section h5 {
+.footer_section h5 {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-.footer-section hr {
+.footer_section hr {
   border: none;
-  border-top: 1px solid #555;
+  border-top: 2px solid #555;
   margin: 10px 0;
 }
 
-.footer-section p {
+.footer_section p {
   color: #aaa;
 }
 
-.footer-link {
+.footer_link {
   color: #ccc;
   text-decoration: none;
 }
 
-.footer-link:hover {
+.footer_link:hover {
   color: var(--secondary-color);
   text-decoration: underline;
 }
 
-.footer-section .text-center p {
+.footer_section .text-center p {
   color: #777;
   font-size: 0.8rem;
   margin-top: 20px;

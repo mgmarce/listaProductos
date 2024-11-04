@@ -1,7 +1,5 @@
-import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore'
+//import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Styles from '../styles/Home.module.css';
 import imgSlide1 from '../img/img1.jpg'
 import imgSlide2 from '../img/img2.jpg'
@@ -17,8 +15,7 @@ import imgProduct7 from '../img/producto7.jpg'
 import imgProduct8 from '../img/producto8.jpg'
 import imgProduct9 from '../img/producto9.jpg'
 
-
-import db from '../firebase/appConfig'
+//import db from '../firebase/appConfig'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
@@ -34,7 +31,7 @@ export default function Home() {
 						<a className={Styles.nav_link} href="#productos">Productos</a>
 						<a className={Styles.nav_link} href="#sobre">Sobre</a>
 						<a className={Styles.nav_link} href="#contacto">Contacto</a>
-						<a className={Styles.nav_link} href="#">Ingresar</a>
+						<Link to="/Login" className={Styles.nav_link}>Ingresar</Link>
 					</div>
 				</div>
 			</nav>
@@ -206,7 +203,55 @@ export default function Home() {
 						<button className={Styles.btn_load_more}>Cargar más...</button>
 					</div>
 				</div>
+				<div className={`${Styles.about_us} mt-4 mb-4`} id="sobre">
+					<div className="container py-5">
+						<div className="row align-items-center text-center">
+							<div className="col-md-12 mb-4 mb-md-0">
+								<a className={Styles.title} href="#">Sobre Nosotros</a>
+								<hr className={`${Styles.hr_title} border-2 mb-3`} />
+								<p className={Styles.about_text}>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam suscipit animi totam assumenda veniam quaerat incidunt magnam dolorem nesciunt, tempora facere quo laboriosam, excepturi dicta culpa veritatis, aperiam optio fuga.
+								</p>
+								<button className={Styles.btn_ingresar}>Ingresar</button>
+							</div>
+						</div>
+					</div>
+					</div>
 			</main>
+			<footer className={Styles.footer_section} id="contacto">
+				<div className="container py-2">
+					<div className="row">
+						<div className="col-md-3 mb-3">
+							<h5>Contacto</h5>
+							<hr />
+							<p>Phone: +121 098 8907 9987<br/>Email: info@example.com</p>
+						</div>
+						<div className="col-md-3 mb-3">
+							<h5>Ubicación</h5>
+							<hr />
+							<p>0926k 4th block building, king Avenue, New York City</p>
+						</div>
+						<div className="col-md-3 mb-3">
+							<h5>Links</h5>
+							<hr/>
+							<ul className="list-unstyled">
+								<li><a href="#" className={Styles.footer_link}>Inicio</a></li>
+								<li><a href="#" className={Styles.footer_link}>Ingresar</a></li>
+								<li><a href="#" className={Styles.footer_link}>Productos</a></li>
+								<li><a href="#" className={Styles.footer_link}>Tienda</a></li>
+							</ul>
+						</div>
+						<div className="col-md-3 mb-3">
+							<h5>Registrate</h5>
+							<hr/>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. illum commodi aliquam harum quia perspiciatis velit.</p>
+						</div>
+					</div>
+					<div className="text-center mt-2">
+						<p>© 2024 minim. Todos los derechos reservados | Diseñado por Marcela Menjívar</p>
+					</div>
+				</div>
+		</footer>
     </>
   )
 }
