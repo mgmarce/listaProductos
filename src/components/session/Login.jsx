@@ -54,9 +54,9 @@ export default function Login() {
 
     return (
         <>
-            <section className={`${Styles.card_estilo}`}>
+            <div className={`${Styles.card_estilo}`}>
                 <div className={`${Styles.card_body} card d-block mx-auto`}>
-                    <div className={Styles.card_linea}></div>
+                    {/* <div className={Styles.card_linea}></div> */}
                     <div className={`${Styles.card_contenido} card-body`}>
                         <img src={imgLogin} className='d-block mx-auto mb-2' alt="" />
                         <h4 className="card-title text-center">Iniciar sesión</h4>
@@ -97,9 +97,9 @@ export default function Login() {
                         </form>
                         <Button variant="link" onClick={handleShowRegisterModal}>¿Aún no tienes cuenta? Regístrate</Button>
                     </div>
-                    <div className={Styles.card_linea}></div>
+                    {/* <div className={Styles.card_linea}></div> */}
                 </div>
-            </section>
+            </div>
 
             <Modal show={showRegisterModal} onHide={handleCloseRegisterModal}>
                 <Modal.Header closeButton>

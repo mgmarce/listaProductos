@@ -2,9 +2,8 @@
 :root {
     --primary-color: #3f4343;
     --secondary-color: #ffffff;
-    --first-color: #FF4E00;
-    --first-color-hover: #cd3a00;
-    --second-color: #5677e2;
+    --first-color: #5677e2;
+    --first-color-hover: #3a5099;
     --hr-color:#ccc;
 }
 

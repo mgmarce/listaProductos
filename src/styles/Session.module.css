@@ -12,14 +12,18 @@
     width: 90px;
 }
 
-.card_linea{
-    padding: 2px;
-    background-color: var(--primary-color);
+.card_contenido h4{
+    font-weight: 600;
 }
+
+/*.card_linea{
+    padding: 1px;
+    background-color: var(--primary-color);
+}*/
 
 .card_button {
     padding: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--first-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -27,8 +31,9 @@
 }
 
 .card_button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--first-color-hover);
 }
+
 
 .btn_center {
     display: flex;
