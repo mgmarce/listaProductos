@@ -83,8 +83,8 @@ export default function ListProducts() {
 			name: 'Acciones',
 			cell: row => (
 				<div>
-					<button onClick={() => openEditModal(row)}>Editar</button>
-					<button onClick={() => confirmDeleteProduct(row)} style={{ marginLeft: '10px' }}>
+					<button className='btn btn-dark btn-sm' onClick={() => openEditModal(row)}>Editar</button>
+					<button className='btn btn-dark btn-sm' onClick={() => confirmDeleteProduct(row)} style={{ marginLeft: '10px' }}>
 						Eliminar
 					</button>
 				</div>
@@ -154,13 +154,11 @@ export default function ListProducts() {
 			}
 		}
 
-		// Cerrar el modal y resetear el formulario
 		setShowModal(false)
 		setEditProduct(null)
 		setNewProduct({ name: '', description: '', price: '' })
 	}
 
-	// Filtrado de productos basado en el término de búsqueda
 	const filteredProducts = products.filter(product =>
 		product.name.toLowerCase().includes(searchTerm.toLowerCase())
 	)
@@ -209,7 +207,7 @@ export default function ListProducts() {
 							/>
 						</div>
 						<div className={`${Styles.align_left} mb-3`}>
-							<button className='btn btn-info' onClick={() => { setShowModal(true); setEditProduct(null); }}>Agregar</button>
+							<button className='btn btn-dark btn-sm' onClick={() => { setShowModal(true); setEditProduct(null); }} >Agregar</button>
 						</div>
 						<DataTable
 							columns={columns}
@@ -224,7 +222,7 @@ export default function ListProducts() {
 
 						{/* Modal para agregar/editar producto */}
 						{showModal && (
-							<div className={`${Styles.modal} modal show`} tabIndex="-1" style={{ display: 'block' }}>
+							<div className={`${Styles.modal} modal fade show`} tabIndex="-1" style={{ display: 'block' }}>
 								<div className="modal-dialog">
 									<div className="modal-content">
 										<div className="modal-header">
@@ -247,7 +245,7 @@ export default function ListProducts() {
 
 						{/* Modal de confirmación de eliminación */}
 						{showDeleteModal && (
-							<div className={`${Styles.modal} modal show`} tabIndex="-1" style={{ display: 'block' }}>
+							<div className={`${Styles.modal} modal fade show`} tabIndex="-1" style={{ display: 'block' }}>
 								<div className="modal-dialog">
 									<div className="modal-content">
 										<div className="modal-header">
@@ -265,6 +263,8 @@ export default function ListProducts() {
 								</div>
 							</div>
 						)}
+
+
 					</div>
 				</>
 			}
